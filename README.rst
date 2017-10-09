@@ -35,3 +35,8 @@ To enable this extension, add it to ``conf.py`` of your sphinx project:
     extensions = ['piximg']
 
 Done.
+
+Demo_
+-----
+
+.. _Demo: https://titansnow.github.io/piximg
