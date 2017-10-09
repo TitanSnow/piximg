@@ -1,3 +1,5 @@
+import pkg_resources
+
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
@@ -43,3 +45,9 @@ def setup(app):
     app.add_node(PiximgNode, html=(visit_pixiv, None))
     app.add_directive('piximg', PiximgDirective)
     app.connect('builder-inited', embed_js)
+
+    return {
+        'version': pkg_resources.get_distribution('piximg').version,
+        'parallel_read_safe': True,
+        'parallel_write_safe': True,
+    }
